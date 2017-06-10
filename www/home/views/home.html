@@ -46,7 +46,7 @@
 
                 <div class="item">
                     <ul class="list">
-                        <li class="item" ng-repeat="city in cities" ng-click="selectCity(city)">
+                        <li class="item" ng-repeat="city in cities" ng-click="selectCity(city)" ng-class="{'citySelected': selectedCity.id == city.id}">
                             {{city.name}}, {{city.state}}
                         </li>
                     </ul>

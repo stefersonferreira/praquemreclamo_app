@@ -9,7 +9,7 @@ angular.module('starter')
         }
 
         $scope.onOpenChooseCity = function () {
-            console.log('click');
+            $scope.selectedCity = $scope.currentCity;
             $scope.modal.show();
         }
 
@@ -27,12 +27,13 @@ angular.module('starter')
         };
 
         $scope.selectCity = function ( city ) {
-            $rootScope.currentCity = city;
+            $scope.selectedCity = city;
         }
 
         
         $scope.saveChooseCity = function () {
             $scope.modal.hide();
+            $scope.currentCity = $scope.selectedCity;
         };
 
 
