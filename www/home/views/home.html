@@ -1,32 +1,49 @@
 <ion-view view-title="Pra Quem Reclamo?" class="home">
     <ion-content>
 
-        <div class="row">
+        <div class="logo">
             <h1>Pra Quem Reclamo?</h1>
         </div>
 
-
         <div class="row">
             <div class="col">
-                <div class="list list-inset">
-                    <label class="item item-input">
-                        <i class="icon ion-search placeholder-icon"></i>
-                        <input type="text" placeholder="Search">
-                    </label>
+                <div class="list list-inset search">
+                  <label class="item item-input">
+                    <input type="text" placeholder="Digite sua reclamação aqui.">
+                    <i class="icon ion-search placeholder-icon"></i>
+                  </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="outrasOpcoes">
+            <h4>Outras Opções</h4>
+            <div class="row">
+                <div class="col">
+                    <!-- <button class="button button-full button-positive" ng-click="onBtnReclamacao()"><i class="fa fa-bullhorn" aria-hidden="true"></i> Reclamar !</button>
+                    <button class="button button-full button-calm"><i class="fa fa-map" aria-hidden="true"></i> Guia de Serviços</button>
+                    <button class="button button-full button-Balanced"><i class="fa fa-trophy" aria-hidden="true"></i> Top 10</button> -->
+                    <a href="">
+                        <i class="icon ion-navicon-round placeholder-icon"></i>
+                        <p>Guia de Serviços</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="">
+                        <i class="icon ion-ios-list-outline placeholder-icon"></i>
+                        <p>Top #10</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="">
+                        <i class="icon ion-plus-circled placeholder-icon"></i>
+                        <p>Contribua</p>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col">
-                <button class="button button-full button-positive" ng-click="onBtnReclamacao()"><i class="fa fa-bullhorn" aria-hidden="true"></i> Reclamar !</button>
-                <button class="button button-full button-calm"><i class="fa fa-map" aria-hidden="true"></i> Guia de Serviços</button>
-                <button class="button button-full button-Balanced"><i class="fa fa-trophy" aria-hidden="true"></i> Top 10</button>
-            </div>
-        </div>
-
-
-        <div class="bar bar-footer bar-balanced">
+        <div class="bar bar-footer">
             <div class="title" ng-click="onOpenChooseCity()"><i class="fa fa-map-marker"></i> {{currentCity.name}}, {{currentCity.state}}</div>
         </div>
 
