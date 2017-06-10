@@ -43,12 +43,12 @@
 
 .home .outrasOpcoes h4 {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
 .home .outrasOpcoes .col {
     text-align: center;
-    padding-bottom: 20px;
+    
 }
 
 .home .outrasOpcoes .col a {
@@ -62,7 +62,7 @@
 
 .home .outrasOpcoes .col a i {
     color: black;
-    font-size: 40px;
+    font-size: 32px;
     margin-left: 10px;
 }
 
