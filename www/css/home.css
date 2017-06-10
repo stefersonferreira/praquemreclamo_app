@@ -1,6 +1,7 @@
 /**************************************************************************************************************** 
-    STYLES - Global Styles
+    STYLES - Homepage 
 ****************************************************************************************************************/
+
 
 .home div.titulo {
     padding-top: 40px;
@@ -77,34 +78,3 @@
 .localization-modal .button-positive {
     background-color: #3a8ad1;
 }
-
-/**************************************************************************************************************** 
-    INSIDE PAGES - Inside Page Styles
-****************************************************************************************************************/
-
-/* Categorias */
-
-.localization-modal .citySelected {
-    background-color: lightgray;
-}
-
-.categories div.titulo {
-    padding-top: 40px;
-    text-align: center;
-}
-
-.categories div.search label {
-    padding: 0px 0px 0px 20px;
-}
-
-.categories div.search label i {
-    padding: 5px 30px;
-    color: black;
-    font-size: 30px;
-    background-color: #dddddd;
-}
-=======
-.text-center {
-    text-align: center;
-}
->>>>>>> 6a36819918422c708535bc4cbfa59da296a1a288
