@@ -32,12 +32,15 @@
     <!-- your app's js -->
     <script src="core/app.js"></script>
 
-    <script src="home/controllers/home.controller.js"></script>
-
+    <script src="core/controllers/app.controller.js"></script>
     <script src="core/controllers/controllers.js"></script>
+
+    <script src="home/controllers/home.controller.js"></script>
+    <script src="reclamacoes/controllers/categorias-reclamacoes.controller.js"></script>
+
   </head>
 
-  <body ng-app="starter">
+  <body ng-app="starter" ng-controller="AppController">
     <ion-nav-view></ion-nav-view>
   </body>
 </html>
