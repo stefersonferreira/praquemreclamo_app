@@ -1,0 +1,82 @@
+/**************************************************************************************************************** 
+    STYLES - Homepage 
+****************************************************************************************************************/
+
+
+.home div.logo {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.home div.botaoCategorias {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.home div.botaoCategorias a i {
+    color: black;
+    font-size: 80px;
+}
+
+.home div.search label {
+    padding: 0px 0px 0px 20px;
+}
+
+.home div.search label i {
+    padding: 5px 30px;
+    color: black;
+    font-size: 30px;
+    background-color: #dddddd;
+}
+
+.home .bar-footer {
+    background-color: #333333;
+    color: white;
+
+}
+
+.home .outrasOpcoes {
+    background-color: #dddddd;
+    position: absolute;
+    bottom: 44px;
+    width: 100%;
+}
+
+.home .outrasOpcoes h4 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.home .outrasOpcoes .col {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.home .outrasOpcoes .col a {
+    text-decoration: none;
+    color: black;
+}
+
+.home .outrasOpcoes .col a p {
+    margin-top: 10px;
+}
+
+.home .outrasOpcoes .col a i {
+    color: black;
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.home .bar-footer div i {
+    color: #6fa8dc;
+}
+
+/**************************************************************************************************************** 
+    INSIDE PAGES - Inside Page Styles
+****************************************************************************************************************/
+
+/* Categorias */
+
+.localization-modal .citySelected {
+    background-color: lightgray;
+}
