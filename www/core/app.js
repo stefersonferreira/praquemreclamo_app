@@ -43,7 +43,7 @@ angular.module('starter', ['ionic'])
       }
     })
     
-    .state('app.categoriaReclamacoes', {
+    .state('app.categoriasReclamacoes', {
       url: '/categoriasreclamacoes',
       views: {
         'menuContent': {

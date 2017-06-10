@@ -1,4 +1,4 @@
 angular.module('starter')
-    .controller('CategoriasReclamacoesCtrl', function () {
+    .controller('CategoriasReclamacoesCtrl', [ '$state' , function ( $state ) {
 
-    });
+    }]);
