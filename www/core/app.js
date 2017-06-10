@@ -53,6 +53,16 @@ angular.module('starter', ['ionic'])
       }
     })
 
+    .state('app.subCategoriasReclamacoes', {
+      url: '/categoriasreclamacoes/:id',
+      views: {
+        'menuContent': {
+          templateUrl: 'reclamacoes/views/subcategorias-reclamacoes.html',
+          controller: 'SubCategoriasReclamacoesCtrl'
+        }
+      }
+    })
+
   .state('app.about', {
     url: '/about',
     views: {

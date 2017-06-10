@@ -1,10 +1,7 @@
 angular.module('starter')
     .controller('HomeCtrl', ['$scope','$rootScope', '$state', '$ionicModal', function ($scope, $rootScope, $state, $ionicModal) {
 
-    
-
         $scope.onBtnReclamacao = function () {
-            console.log('click');
             $state.go('app.categoriasReclamacoes');
         }
 
