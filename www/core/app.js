@@ -49,12 +49,23 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+
     .state('app.home', {
       url: '/home',
       views: {
         'menuContent': {
           templateUrl: 'home/views/home.html',
           controller: 'HomeCtrl'
+        }
+      }
+    })
+    
+    .state('app.categoriaReclamacoes', {
+      url: '/categoriasreclamacoes',
+      views: {
+        'menuContent': {
+          templateUrl: 'reclamacoes/views/categorias-reclamacoes.html',
+          controller: 'CategoriasReclamacoesCtrl'
         }
       }
     })
