@@ -95,7 +95,37 @@ angular.module('starter')
         {
             id: 7,
             categoryId: 2,
+            name: 'Aegypti',
+            icon: 'fa-bug'
+        },
+        {
+            id: 7,
+            categoryId: 2,
             name: 'Onibus',
             icon: 'fa-bus'
+        },
+        {
+            id: 8,
+            categoryId: 1,
+            name: 'USF',
+            icon: 'fa-user-md'
+        },
+        {
+            id: 9,
+            categoryId: 1,
+            name: 'SAMU',
+            icon: 'fa-ambulance'
+        },
+        {
+            id: 10,
+            categoryId: 1,
+            name: 'HOSPITAL',
+            icon: 'fa-hospital-o'
+        },
+        {
+            id: 11,
+            categoryId: 1,
+            name: 'Focos',
+            icon: 'fa-bug'
         }]
     });

@@ -8,9 +8,8 @@ angular.module('starter')
             for (var i = 0; i < (subcategorias ? subcategorias.length : 0); i++) {
 
                 
-            console.log(subcategorias[i]);
 
-                if (subcategorias[i].categoryId === categoryId ) {
+                if (subcategorias[i].categoryId == categoryId ) {
                     out.push(subcategorias[i]);
                 }
 
