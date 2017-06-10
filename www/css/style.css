@@ -69,36 +69,3 @@
 .localization-modal .citySelected {
     background-color: lightgray;
 }
-
-.categories ul.rig{ 
-    font-size: 0px; 
-    list-style: none; 
-    padding: 0px !important; 
-    margin-left: -2.5%; 
-}
-
-.categories ul.rig li { 
-    display: inline-block; 
-    padding: 2px; 
-    margin: 0 0 6px 2.5%; 
-    background:white;	
-    font-size: 16px; 
-    font-size: 1rem; 
-    vertical-align: top; 
-    border: 2px solid darkslategrey;
-    border-radius: 8px; 
-    }
-
-.categories ul.rig li h2{ 
-    font-size: 20px; 
-    color: #111; 
-    margin-bottom: 5px;  
-    text-align: center; 
-    display: inline-block; 
-    white-space: nowrap ; 
-    text-overflow: clip;	
-    }
-
-
-.categories ul.rig li h5{ color: black; font-size: 9px; margin: 2px 0 0 0; text-align: center;}
-.categories ul.rig.col-2 li{ width: 47%; }
