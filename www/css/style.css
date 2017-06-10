@@ -2,6 +2,10 @@
     STYLES - Homepage and Global Styles
 ****************************************************************************************************************/
 
+.text-center {
+    text-align: center;
+}
+
 .home div.logo {
     padding-top: 40px;
     text-align: center;

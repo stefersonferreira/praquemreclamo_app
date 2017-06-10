@@ -1,8 +1,10 @@
-<ion-view view-title="Reclamações" class="categories">
+<ion-view class="categories">
     <ion-content>
 
         <div class="row">
-            <h1>Reclamações</h1>
+            <div class="col text-center">
+                <h1>Reclamações</h1>
+            </div>
         </div>
 
 
@@ -24,14 +26,14 @@
         </div>
         <div class="row">
             <div class="col">
-            <div id="two-column" class="grid-container" style="display:block;">
-                <ul class="rig col-2">
-                    <li class="" ng-repeat="category in categories" ng-click="selectCategory(category)">
-                        <h2><i class="fa fa-2x" ng-class="category.icon" aria-hidden="true"></i></h2>
-                        <h5>{{category.name}}</h5>
-                    </li>
-                </ul>
-            </div>
+                <div id="two-column" class="grid-container" style="display:block;">
+                    <ul class="rig col-2">
+                        <li class="" ng-repeat="category in categories" ng-click="selectCategory(category)">
+                            <h2><i class="fa fa-2x" ng-class="category.icon" aria-hidden="true"></i></h2>
+                            <h5>{{category.name}}</h5>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
