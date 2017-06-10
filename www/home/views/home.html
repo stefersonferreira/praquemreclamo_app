@@ -27,8 +27,36 @@
 
 
         <div class="bar bar-footer bar-balanced">
-            <div class="title"><i class="fa fa-map-marker"></i> João Pessoa</div>
+            <div class="title" ng-click="onOpenChooseCity()"><i class="fa fa-map-marker"></i> {{currentCity.name}}, {{currentCity.state}}</div>
         </div>
 
     </ion-content>
 </ion-view>
+
+<script id="my-modal.html" type="text/ng-template">
+    <ion-modal-view>
+
+        <ion-header-bar class="bar bar-header bar-positive">
+            <h1 class="title">Escolher uma cidade</h1>
+            <button class="button button-clear button-primary" ng-click="cancelChooseCity()"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </ion-header-bar>
+
+        <ion-content>
+            <div class="list list-inset">
+
+                <div class="item">
+                    <ul class="list">
+                        <li class="item" ng-repeat="city in cities" ng-click="selectCity(city)">
+                            {{city.name}}, {{city.state}}
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <button class="button button-full button-positive" ng-click="saveChooseCity()">Escolher</button>
+                </div>
+            </div>
+        </ion-content>
+
+    </ion-modal-view>
+</script>
