@@ -7,6 +7,16 @@
     text-align: center;
 }
 
+.home div.botaoCategorias {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.home div.botaoCategorias a i {
+    color: black;
+    font-size: 80px;
+}
+
 .home div.search label {
     padding: 0px 0px 0px 20px;
 }
