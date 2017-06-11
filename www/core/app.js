@@ -91,6 +91,16 @@ angular.module('starter', [
         }
       })
 
+      .state('app.reclamacao', {
+        url: '/reclamacao/:id',
+        views: {
+          'menuContent': {
+            templateUrl: 'reclamacoes/views/reclamacao.html',
+            controller: 'reclamacaoCtrl'
+          }
+        }
+      })
+
       .state('app.about', {
         url: '/about',
         views: {
