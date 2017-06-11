@@ -10,7 +10,19 @@ angular.module('starter')
             $scope.modal.show();
         }
 
+        $scope.searchParams = {
+            searchField: ''
+        }
 
+
+        $scope.onSpeechRecongition = function () {
+            console.log('click');
+            $scope.searchParams.searchField = "click";
+        }
+
+        /**
+         * MODAL LOCALIZATION
+         */
         $ionicModal.fromTemplateUrl('my-modal.html', {
             scope: $scope,
             animation: 'slide-in-up'

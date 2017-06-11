@@ -9,7 +9,7 @@
             <div class="col">
                 <div class="list list-inset search">
                   <label class="item item-input">
-                    <input type="text" placeholder="Digite sua reclamação aqui.">
+                    <input type="text" placeholder="Digite sua reclamação aqui." ng-model="searchParams.searchField">
                     <i class="icon fa fa-search placeholder-icon"></i>
                   </label>
                 </div>
@@ -37,7 +37,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="">
+                    <a ng-click="onSpeechRecongition()">
                         <i class="icon fa fa-list-ol placeholder-icon"></i>
                         <p>Top #10</p>
                     </a>
