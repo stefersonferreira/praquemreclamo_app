@@ -1,31 +1,55 @@
 .categories .section {
     margin-top: 10px;
+    text-align: center;
 }
 
-.categories ul.rig{ 
-    font-size: 0px; 
-    list-style: none; 
-    padding: 0px !important; 
-    margin-left: -2.5%; 
+.categories .opcoesCategorias {
+    padding: 0px;
 }
 
-.categories ul.rig li { 
-    display: inline-block; 
-    padding: 10px 6px; 
-    margin: 0 0 6px 2.5%; 
-    background:white;	
-    vertical-align: top; 
-    border: 2px solid darkslategrey;
-    border-radius: 8px; 
-    }
+.categories .opcoesCategorias .col{
+    padding: 0px;
+}
 
-.categories ul.rig li h2{ 
-    font-size: 20px; 
-    color: #111; 
-    margin-bottom: 5px;  
-    text-align: center; 
-    }
+.categories .opcoesCategorias .col ul li {
+    color: white;
+    border: none;
+    padding: 20px 30px;
+}
 
-.categories ul.rig li h5{ color: black; font-size: 15px; margin: 2px 0 0 0; text-align: center;}
+.categories .opcoesCategorias .col ul li span{
+    float: left;
+    margin-top: 6px;
+}
 
-.categories ul.rig.col-2 li{ width: 47%; }
+.categories .opcoesCategorias .col ul li i {
+    float: right;
+}
+
+.categories .opcoesCategorias .col ul li:nth-child(1){
+    background-color: #0BA7DA;
+}
+
+.categories .opcoesCategorias .col ul li:nth-child(2){
+    background-color: #287CC2;
+}
+
+.categories .opcoesCategorias .col ul li:nth-child(3){
+    background-color: #5153AA;
+}
+
+.categories .opcoesCategorias .col ul li:nth-child(4){
+    background-color: #A534A6;
+}
+
+.categories .opcoesCategorias .col ul li:nth-child(5){
+    background-color: #E878C0;
+}
+
+.categories .opcoesCategorias .col ul li:nth-child(6){
+    background-color: #ED5774;
+}
+
+.categories .opcoesCategorias .col ul li:nth-child(7){
+    background-color: #EF3F53;
+}

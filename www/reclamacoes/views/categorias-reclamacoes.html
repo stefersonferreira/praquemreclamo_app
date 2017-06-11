@@ -2,34 +2,24 @@
     <ion-content>
         <div class="row">
             <div class="col text-center">
-                <h1>Reclamações</h1>
+                <h1>Categorias</h1>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col">
-                <div class="list list-inset search">
-                  <label class="item item-input">
-                    <input type="text" placeholder="Digite sua reclamação aqui.">
-                    <i class="icon fa fa-search placeholder-icon"></i>
-                  </label>
-                </div>
-            </div>
-        </div>
         <div class="row section">
-            <h5>Ou escolhe uma categoria:</h5>
+            <div class="col">
+                <h5>Escolha uma categoria:</h5>
+            </div>
         </div>
 
-        <div class="row">
+        <div class="row opcoesCategorias">
             <div class="col">
-                <div id="two-column" class="grid-container" style="display:block;">
-                    <ul class="rig col-2">
-                        <li class="" ng-repeat="category in categories" ng-click="selectCategory(category)">
-                            <h2><i class="fa fa-2x" ng-class="category.icon" aria-hidden="true"></i></h2>
-                            <h5>{{category.name}}</h5>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="list">
+                    <li class="item" ng-repeat="category in categories" ng-click="selectCategory(category)">
+                        <span>{{category.name}}</span>
+                        <i class="fa fa-2x" ng-class="category.icon" aria-hidden="true"></i>
+                    </li>
+                </ul>
             </div>
         </div>
 
