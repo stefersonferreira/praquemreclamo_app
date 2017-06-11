@@ -1,0 +1,43 @@
+.subcategories .section {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.subcategories .opcoesCategorias {
+    padding: 0px;
+}
+
+.subcategories .opcoesCategorias .col{
+    padding: 0px;
+}
+
+.subcategories .opcoesCategorias .col ul li {
+    color: white;
+    border: none;
+    padding: 20px 30px;
+}
+
+.subcategories .opcoesCategorias .col ul li span{
+    float: left;
+    margin-top: 6px;
+}
+
+.subcategories .opcoesCategorias .col ul li i {
+    float: right;
+}
+
+.subcategories .opcoesCategorias .col ul li:nth-child(1){
+    background-color: #05455A;
+}
+
+.subcategories .opcoesCategorias .col ul li:nth-child(2){
+    background-color: #204C5A;
+}
+
+.subcategories .opcoesCategorias .col ul li:nth-child(3){
+    background-color: #0880A7;
+}
+
+.subcategories .opcoesCategorias .col ul li:nth-child(4){
+    background-color: #4FBCE0;
+}

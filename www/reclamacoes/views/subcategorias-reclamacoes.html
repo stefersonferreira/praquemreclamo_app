@@ -1,4 +1,4 @@
-<ion-view class="categories">
+<ion-view class="subcategories">
     <ion-content>
 
         <div class="row">
@@ -8,33 +8,20 @@
             </div>
         </div>
 
-
         <div class="row section">
-            <h5>Digite uma pergunta:</h5>
-        </div>
-        <div class="row">
             <div class="col">
-                <div class="list list-inset">
-                    <label class="item item-input">
-                        <i class="icon ion-search placeholder-icon"></i>
-                        <input type="text" placeholder="Search">
-                    </label>
-                </div>
+                <h5>Escolha uma subcategoria:</h5>
             </div>
         </div>
-        <div class="row section">
-            <h5>Ou escolhe uma opção:</h5>
-        </div>
-        <div class="row">
+
+        <div class="row opcoesCategorias">
             <div class="col">
-                <div id="two-column" class="grid-container" style="display:block;">
-                    <ul class="rig col-2">
-                        <li class="" ng-repeat="subcategory in subcategories | subCatFilter:currentCategory.id" ng-click="selectSebCategory(subcategory)">
-                            <h2><i class="fa fa-2x" ng-class="subcategory.icon" aria-hidden="true"></i></h2>
-                            <h5>{{subcategory.name}}</h5>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="list">
+                    <li class="item" ng-repeat="subcategory in subcategories | subCatFilter:currentCategory.id" ng-click="selectSebCategory(subcategory)">
+                        <span>{{subcategory.name}}</span>
+                        <i class="fa fa-2x" ng-class="subcategory.icon" aria-hidden="true"></i>
+                    </li>
+                </ul>
             </div>
         </div>
 
