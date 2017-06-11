@@ -1,0 +1,55 @@
+.reclamacoes .section {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.reclamacoes .opcoesCategorias {
+    padding: 0px;
+}
+
+.reclamacoes .nomeSubcategoria {
+    color: #287CC2;
+    margin-top: -9px;
+}
+
+.reclamacoes .opcoesCategorias .col{
+    padding: 0px;
+}
+
+.reclamacoes .opcoesCategorias .col ul li {
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    background-color: #333;
+}
+
+.reclamacoes .opcoesCategorias .col ul li span {
+    color: #105269;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.reclamacoes .opcoesCategorias .col ul li i{
+    font-size: 18px;
+    color:#aeeaff;
+    margin-right: 10px;
+}
+
+.reclamacoes .opcoesCategorias .col ul li p{
+    font-size: 14px;
+    color:#aeeaff;
+    margin-top: 10px;
+    margin-left: 33px;
+}
+
+.reclamacoes .opcoesCategorias .col ul li:nth-child(1){
+    background-color: #0A93C0;
+}
+
+.reclamacoes .opcoesCategorias .col ul li:nth-child(2){
+    background-color: #0CB1E7;
+}
+
+.reclamacoes .opcoesCategorias .col ul li:nth-child(3){
+    background-color: #0A93C0;
+}
