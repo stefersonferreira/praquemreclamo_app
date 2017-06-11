@@ -8,18 +8,19 @@ angular.module('starter')
                 $state.go('app.subCategoriasReclamacoes', { id: id });
                 return;
             }
+        
 
             $scope.currentSubCategory = lodash.find($rootScope.subcategories, { 'id': id });
             $scope.currentCategory = lodash.find($rootScope.categories, { 'id': $scope.currentSubCategory.categoryId });
-            /*
+            
             
                         $http({
                             method: 'GET',
-                            url: 'http://10.0.0.101:8080/api/getcategorias'
+                            url: 'http://10.0.0.106:8080/api/perguntas/' + id
                         }).then(function successCallback(response) {
-                            $rootScope.categories = response.data;
+                            $rootScope.reclamacoes = response.data;
                         }, function errorCallback(response) {
                         });
-            */
+            
 
         }]);
