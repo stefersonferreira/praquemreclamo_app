@@ -5,22 +5,23 @@
             <div class="col text-center">
                 <h1><i class="fa" ng-class="currentCategory.icon" aria-hidden="true"></i></h1>
                 <h2>{{currentCategory.name}}</h2>
-                <h3>{{currentSubCategory.name}}</h3>
+                <h4 class="nomeSubcategoria">{{currentSubCategory.name}}</h4>
             </div>
         </div>
 
         <div class="row section">
             <div class="col">
-                <h5>Escolha uma subcategoria:</h5>
+                <h5>Identifique o seu problema:</h5>
             </div>
         </div>
 
         <div class="row opcoesCategorias">
             <div class="col">
                 <ul class="list">
-                    <li class="item" ng-repeat="reclamacao in reclamacoes " ng-click="selectReclamacao(reclamacao)">
-                        <p>{{reclamacao.title}}</p>
-                        <span>{{reclamacao.description}}</span>
+                    <li class="item item-text-wrap" ng-repeat="reclamacao in reclamacoes " ng-click="selectReclamacao(reclamacao)">
+                        <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                        <span>{{reclamacao.title}}</span>
+                        <p>{{reclamacao.description}}</p>
                     </li>
                 </ul>
             </div>
