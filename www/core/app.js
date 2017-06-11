@@ -34,6 +34,11 @@ angular.module('starter', [
       }
     });
   })
+  
+  // remove cache for views
+  .config(function ($ionicConfigProvider) {
+    $ionicConfigProvider.views.maxCache(0);
+  })
 
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
@@ -72,6 +77,16 @@ angular.module('starter', [
           'menuContent': {
             templateUrl: 'reclamacoes/views/subcategorias-reclamacoes.html',
             controller: 'SubCategoriasReclamacoesCtrl'
+          }
+        }
+      })
+
+      .state('app.reclamacoes', {
+        url: '/reclamacoes/:id',
+        views: {
+          'menuContent': {
+            templateUrl: 'reclamacoes/views/reclamacoes-list.html',
+            controller: 'ReclamacoesListCtrl'
           }
         }
       })

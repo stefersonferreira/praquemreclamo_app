@@ -1,4 +1,4 @@
-<ion-view class="subcategories">
+<ion-view class="reclamacoes">
     <ion-content>
 
         <div class="row">
@@ -17,7 +17,7 @@
         <div class="row opcoesCategorias">
             <div class="col">
                 <ul class="list">
-                    <li class="item" ng-repeat="subcategory in subcategories | subCatFilter:currentCategory.id" ng-click="selectSubCategory(subcategory)">
+                    <li class="item" ng-repeat="subcategory in subcategories | subCatFilter:currentCategory.id" ng-click="selectSebCategory(subcategory)">
                         <span>{{subcategory.name}}</span>
                         <i class="fa fa-2x" ng-class="subcategory.icon" aria-hidden="true"></i>
                     </li>

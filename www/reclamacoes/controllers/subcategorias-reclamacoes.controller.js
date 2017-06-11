@@ -4,44 +4,26 @@ angular.module('starter')
 
             var id = Number($stateParams.id);
 
-            var getCategorias = function (callback) {
-                $http({
-                    method: 'GET',
-                    url: 'http://10.0.0.101:8080/api/getcategorias'
-                }).then(function successCallback(response) {
-                    $rootScope.categories = response.data;
-                    callback(null)
-                }, function errorCallback(response) {
-                    callback(response)
-                });
-            }
-
-
-            var getSubCategorias = function (callback) {
-                $http({
-                    method: 'GET',
-                    url: 'http://10.0.0.101:8080/api/getsubcategorias'
-                }).then(function successCallback(response) {
-                    $rootScope.subcategories = response.data;
-                    callback(null)
-                }, function errorCallback(response) {
-                    callback(response)
-                });
-            }
 
             if (!$rootScope.categories) {
-                getCategorias(function (err) {
-                    $scope.currentCategory = lodash.find($rootScope.categories, { 'id': id });
-                    if (!$rootScope.subcategories)
-                        getSubCategorias(function (err) {
-                        })
+                $state.go('app.categoriasReclamacoes');
+                return;
+            }
 
-                })
-            } else {
+            console.log('ok')
+
+            $http({
+                method: 'GET',
+                url: 'http://10.0.0.106:8080/api/getsubcategorias'
+            }).then(function successCallback(response) {
+                $rootScope.subcategories = response.data;
                 $scope.currentCategory = lodash.find($rootScope.categories, { 'id': id });
-                if (!$rootScope.subcategories)
-                    getSubCategorias(function (err) {
-                    })
+            }, function errorCallback(response) {
+            });
+
+
+            $scope.selectSubCategory = function (subcategory) {
+                $state.go('app.reclamacoes', { id: subcategory.id });
             }
 
         }]);

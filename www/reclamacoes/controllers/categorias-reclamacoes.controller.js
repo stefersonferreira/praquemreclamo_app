@@ -9,7 +9,7 @@ angular.module('starter')
 
             $http({
                 method: 'GET',
-                url: 'http://10.0.0.101:8080/api/getcategorias'
+                url: 'http://10.0.0.106:8080/api/getcategorias'
             }).then(function successCallback(response) {
                 $rootScope.categories = response.data;
             }, function errorCallback(response) {
