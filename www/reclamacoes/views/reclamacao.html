@@ -12,5 +12,17 @@
             </div>
         </div>
 
+<h3>Pra Quem Reclamar?</h3>
+<div class="list">
+
+    <a class="item" ng-repeat="entity in reclamacao.entities">
+      <h2>{{entity.name}}</h2>
+      <p>{{entity.fone}}</p>
+      <p>{{entity.email}}</p>
+      <p>{{entity.url}}</p>
+    </a>
+
+</div>
+
     </ion-content>
 </ion-view>
