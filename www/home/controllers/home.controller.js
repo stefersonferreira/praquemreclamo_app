@@ -18,6 +18,9 @@ angular.module('starter')
 
             $scope.onSearchBtn = function () {
 
+                $state.go('app.reclamacoes', { id: 2 });
+
+/*
                 if ($scope.searchParams.searchField.length > 5) {
 
                     $http({
@@ -30,6 +33,7 @@ angular.module('starter')
                     }, function errorCallback(response) {
                     });
                 }
+                */
             }
 
             $scope.onSpeechRecongition = function () {

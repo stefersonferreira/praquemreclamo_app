@@ -4,18 +4,34 @@
         <div class="titulo">
             <h1>Pra Quem Reclamo?</h1>
         </div>
-
+        <!--
         <div class="row">
             <div class="col">
                 <div class="list list-inset search">
                   <label class="item item-input">
                     <input type="text" placeholder="Digite sua reclamação aqui." ng-model="searchParams.searchField">
-                    <i class="icon fa fa-search placeholder-icon"  ng-click="onSearchBtn()"></i>
+                    <i class="icon fa fa-search placeholder-icon" ng-click="onSearchBtn()"></i>
                   </label>
                 </div>
             </div>
         </div>
-        
+-->
+        <div class="row">
+            &nbsp;
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+      <input type="text" placeholder="Digite sua reclamação!" ng-model="searchParams.searchField">
+    </label>
+                    <button class="button button-small" ng-click="onSearchBtn()">
+      <i class="icon fa fa-search placeholder-icon"></i>
+    </button>
+                </div>
+            </div>
+        </div>
+
         <div class="botaoCategorias">
             <h3>Ou navegue por categorias</h3>
             <br><br>
