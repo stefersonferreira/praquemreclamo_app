@@ -10,15 +10,18 @@ angular.module('starter')
                 return;
             }
 
-            $http({
-                method: 'GET',
-                url: 'http://10.0.0.106:8080/api/getsubcategorias'
-            }).then(function successCallback(response) {
-                $rootScope.subcategories = response.data;
-                $scope.currentCategory = lodash.find($rootScope.categories, { 'id': id });
-            }, function errorCallback(response) {
-            });
+            if (!$rootScope.subcategories) {
+                $http({
+                    method: 'GET',
+                    url: 'http://10.0.0.106:8080/api/getsubcategorias'
+                }).then(function successCallback(response) {
+                    $rootScope.subcategories = response.data;
+                    $scope.currentCategory = lodash.find($rootScope.categories, { 'id': id });
+                }, function errorCallback(response) {
+                });
+            }
 
+                    $scope.currentCategory = lodash.find($rootScope.categories, { 'id': id });
 
             $scope.selectSubCategory = function (subcategory) {
                 $state.go('app.reclamacoes', { id: subcategory.id });

@@ -5,13 +5,13 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', [
-  'ionic', 
+  'ionic',
   'ngLodash',
   'ngCordova',
   'ngResource',
-  ])
+])
 
-  .run(function ($rootScope, $ionicPlatform) {
+  .run(function ($rootScope, $ionicPlatform, $cordovaNetwork) {
 
     $rootScope.ionicReady = false;
 
@@ -29,12 +29,18 @@ angular.module('starter', [
         StatusBar.styleDefault();
       }
 
+      $rootScope.ip = "offline";
       if (window.cordova) {
         $rootScope.ionicReady = true;
+        
+        networkinterface.getIPAddress(function (ip) {
+          $rootScope.ip = ip;
+        });
       }
+
     });
   })
-  
+
   // remove cache for views
   .config(function ($ionicConfigProvider) {
     $ionicConfigProvider.views.maxCache(0);

@@ -6,13 +6,14 @@ angular.module('starter')
                 $state.go('app.subCategoriasReclamacoes', { id: category.id });
             }
 
-
-            $http({
-                method: 'GET',
-                url: 'http://10.0.0.106:8080/api/getcategorias'
-            }).then(function successCallback(response) {
-                $rootScope.categories = response.data;
-            }, function errorCallback(response) {
-            });
+            if (!$rootScope.categories) {
+                $http({
+                    method: 'GET',
+                    url: 'http://10.0.0.106:8080/api/getcategorias'
+                }).then(function successCallback(response) {
+                    $rootScope.categories = response.data;
+                }, function errorCallback(response) {
+                });
+            }
 
         }]);

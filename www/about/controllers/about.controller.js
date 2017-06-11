@@ -1,4 +1,4 @@
 angular.module('starter')
-    .controller('AboutCtrl', function () {
+    .controller('AboutCtrl', function ($rootScope) {
 
     });
