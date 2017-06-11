@@ -4,23 +4,46 @@ angular.module('starter')
 
             var id = Number($stateParams.id);
 
+            var getCategorias = function (callback) {
+                $http({
+                    method: 'GET',
+                    url: 'http://10.0.0.101:8080/api/getcategorias'
+                }).then(function successCallback(response) {
+                    $rootScope.categories = response.data;
+                    callback(null)
+                }, function errorCallback(response) {
+                    callback(response)
+                });
+            }
 
-            $http({
-                method: 'GET',
-                url: 'http://10.0.0.101:8080/api/getcategorias'
-            }).then(function successCallback(response) {
-                $rootScope.categories = response.data;
+
+            var getSubCategorias = function (callback) {
                 $http({
                     method: 'GET',
                     url: 'http://10.0.0.101:8080/api/getsubcategorias'
                 }).then(function successCallback(response) {
-                    console.log(response.data)
                     $rootScope.subcategories = response.data;
-                    $scope.currentCategory = lodash.find($rootScope.categories, { 'id': id });
+                    callback(null)
                 }, function errorCallback(response) {
-                    console.log(response)
+                    callback(response)
                 });
-            }, function errorCallback(response) {
-            });
+            }
+
+            if (!$rootScope.categories) {
+                getCategorias(function (err) {
+                    $scope.currentCategory = lodash.find($rootScope.categories, { 'id': id });
+                    if (!$rootScope.subcategories)
+                        getSubCategorias(function (err) {
+                        })
+
+                })
+            } else {
+                $scope.currentCategory = lodash.find($rootScope.categories, { 'id': id });
+                if (!$rootScope.subcategories)
+                    getSubCategorias(function (err) {
+                    })
+            }
 
         }]);
+
+
