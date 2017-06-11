@@ -1,5 +1,6 @@
 angular.module('starter')
-    .controller('HomeCtrl', ['$scope', '$rootScope', '$state', '$ionicModal', function ($scope, $rootScope, $state, $ionicModal) {
+    .controller('HomeCtrl', ['$scope', '$rootScope', '$state', '$http', '$ionicModal', 
+    function ($scope, $rootScope, $state, $http, $ionicModal) {
 
         $scope.onBtnReclamacao = function () {
             $state.go('app.categoriasReclamacoes');
@@ -12,6 +13,21 @@ angular.module('starter')
 
         $scope.searchParams = {
             searchField: ''
+        }
+
+
+        $scope.onSearchBtn = function() {
+
+            console.log('click')
+            
+            $http({
+                method: 'POST',
+                url: 'http://10.0.0.106:8080/api/buscaresposta/',
+                data: { 'pergunta' : $scope.searchParams.searchField }
+            }).then(function successCallback(response) {
+                console.log(response);
+            }, function errorCallback(response) {
+            });
         }
 
 
@@ -71,16 +87,6 @@ angular.module('starter')
             // Execute action
         });
 
-        $scope.onSearchBtn = function() {
-            
-            $http({
-                method: 'GET',
-                url: 'http://10.0.0.106:8080/api/reclamacao/' + id
-            }).then(function successCallback(response) {
-                $scope.reclamacao = response.data;
-            }, function errorCallback(response) {
-            });
-        }
 
 
     }]);
