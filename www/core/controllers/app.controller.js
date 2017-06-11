@@ -31,25 +31,6 @@ angular.module('starter')
             $scope.loading = false;
             $ionicLoading.hide()
         });
-
-        $http({
-            method: 'GET',
-            url: 'http://10.0.0.101:8080/api/getcategorias'
-        }).then(function successCallback(response) {
-            $rootScope.categories = response.data;
-        }, function errorCallback(response) {
-        });
-
         
-        
-        $http({
-            method: 'GET',
-            url: 'http://10.0.0.101:8080/api/getsubcategorias'
-        }).then(function successCallback(response) {
-            console.log(response.data)
-            $rootScope.subcategories = response.data;
-        }, function errorCallback(response) {
-            console.log(response)
-        });
 
     });
