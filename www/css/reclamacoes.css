@@ -26,7 +26,7 @@
 .reclamacoes .opcoesCategorias .col ul li span {
     color: #105269;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .reclamacoes .opcoesCategorias .col ul li i{
@@ -37,19 +37,22 @@
 
 .reclamacoes .opcoesCategorias .col ul li p{
     font-size: 14px;
-    color:#aeeaff;
+    color:white;
     margin-top: 10px;
     margin-left: 33px;
+    line-height: 1.7;
 }
 
 .reclamacoes .opcoesCategorias .col ul li:nth-child(1){
-    background-color: #0A93C0;
+    background-color: #68a8bd;
 }
 
 .reclamacoes .opcoesCategorias .col ul li:nth-child(2){
-    background-color: #0CB1E7;
+    background-color: #6e9aa9;
 }
 
 .reclamacoes .opcoesCategorias .col ul li:nth-child(3){
-    background-color: #0A93C0;
+    background-color: #68a8bd;
 }
+
+.like { float: right; }

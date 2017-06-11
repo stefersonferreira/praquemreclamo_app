@@ -1,0 +1,40 @@
+.top {
+    background-color: #f5f5f5;
+}
+
+.descricao {
+    line-height: 1.8;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.bar-light {
+    background-color: #f5f5f5 !important;
+}
+
+.pin {
+    float: left;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.local {
+    margin-left: 50px;
+}
+
+.local h2 {
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.local p {
+    line-height: 1.7;
+    font-size: 14px;
+    color: #666;
+}
+
+.list a {
+    border-left: 5px solid #287CC2;
+}

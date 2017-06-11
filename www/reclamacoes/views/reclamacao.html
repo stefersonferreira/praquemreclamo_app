@@ -1,28 +1,37 @@
-<ion-view class="reclamacoes">
+<ion-view class="reclamacao">
     <ion-content>
-
+      <div class="top">
         <div class="row">
-            <div class="col">
-                <h2><i class="fa fa-bullhorn" aria-hidden="true"></i> {{reclamacao.title}}</h2>
+            <div class="col text-center">
+                <h1><i class="fa fa-bullhorn" aria-hidden="true"></i></h1>
+                <h2>{{reclamacao.title}}</h2>
             </div>
         </div>
-        <div class="row">
+
+        <div class="row descricao">
             <div class="col">
                 <p>{{reclamacao.description}}</p>
             </div>
         </div>
+      </div> 
 
-<h3>Pra Quem Reclamar?</h3>
-<div class="list">
+      <!-- <h3>Pra Quem Reclamar?</h3> -->
+      <div class="list">
 
-    <a class="item">
-      <h2>{{reclamacao.entity.name}}</h2>
-      <p>{{reclamacao.entity.fone}}</p>
-      <p>{{reclamacao.entity.email}}</p>
-      <p>{{reclamacao.entity.url}}</p>
-    </a>
+          <a class="item">
+            <div class="pin">
+              <i class="fa fa-map-marker " aria-hidden="true"></i>
+            </div>
+            <div class="local">
+              <h2>{{reclamacao.entity.name}}</h2>
+              <p>{{reclamacao.entity.fone}}</p>
+              <p>{{reclamacao.entity.email}}</p>
+              <p>{{reclamacao.entity.url}}</p>
+            </div>
+            
+          </a>
 
-</div>
+      </div>
 
     </ion-content>
 </ion-view>
