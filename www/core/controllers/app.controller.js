@@ -1,5 +1,6 @@
 angular.module('starter')
-    .controller('AppController', function ($rootScope) {
+    .controller('AppController', function ($scope, $rootScope , $ionicLoading) {
+
 
         $rootScope.cities = [{
             id: 1,
@@ -18,8 +19,21 @@ angular.module('starter')
 
         $rootScope.currentCity = $rootScope.cities[0];
 
+        // broadcasting receivers
+        $scope.$on('startLoading', function () {
+            $scope.loading = true;
+            $ionicLoading.show({
+                template: 'Loading...'
+            })
+        });
 
-        $rootScope.categories = [ {
+        $scope.$on('endLoading', function () {
+            $scope.loading = false;
+            $ionicLoading.hide()
+        });
+
+        /*
+        $rootScope.categories = [{
             id: 1,
             name: 'Saúde',
             icon: 'fa-medkit'
@@ -54,9 +68,9 @@ angular.module('starter')
             name: 'Transito',
             icon: 'fa-automobile'
         }]
+*/
 
-        
-        $rootScope.subcategories = [ {
+        $rootScope.subcategories = [{
             id: 1,
             categoryId: 2,
             name: 'Iluminação',

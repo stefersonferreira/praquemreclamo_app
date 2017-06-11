@@ -1,5 +1,5 @@
 angular.module('starter')
-    .controller('HomeCtrl', ['$scope','$rootScope', '$state', '$ionicModal', function ($scope, $rootScope, $state, $ionicModal) {
+    .controller('HomeCtrl', ['$scope', '$rootScope', '$state', '$ionicModal', function ($scope, $rootScope, $state, $ionicModal) {
 
         $scope.onBtnReclamacao = function () {
             $state.go('app.categoriasReclamacoes');
@@ -17,7 +17,19 @@ angular.module('starter')
 
         $scope.onSpeechRecongition = function () {
             console.log('click');
-            $scope.searchParams.searchField = "click";
+            if ($rootScope.ionicReady) {
+            console.log('reacy');
+                $scope.record = function () {
+                    var recognition = new SpeechRecognition();
+                    recognition.onresult = function (event) {
+                        if (event.results.length > 0) {
+                            $scope.searchParams.searchField = event.results[0][0].transcript;
+                            $scope.$apply()
+                        }
+                    };
+                    recognition.start();
+                };
+            }
         }
 
         /**
@@ -29,17 +41,17 @@ angular.module('starter')
         }).then(function (modal) {
             $scope.modal = modal;
         });
-        
+
 
         $scope.cancelChooseCity = function () {
             $scope.modal.hide();
         };
 
-        $scope.selectCity = function ( city ) {
+        $scope.selectCity = function (city) {
             $scope.selectedCity = city;
         }
 
-        
+
         $scope.saveChooseCity = function () {
             $scope.modal.hide();
             $scope.currentCity = $scope.selectedCity;

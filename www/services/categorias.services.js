@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('starter')
 
     .service('categoriasResource', ['$resource', 'REST_CONFIG', function ($resource, REST_CONFIG) {
