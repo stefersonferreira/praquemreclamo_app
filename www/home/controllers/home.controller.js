@@ -71,5 +71,16 @@ angular.module('starter')
             // Execute action
         });
 
+        $scope.onSearchBtn = function() {
+            
+            $http({
+                method: 'GET',
+                url: 'http://10.0.0.106:8080/api/reclamacao/' + id
+            }).then(function successCallback(response) {
+                $scope.reclamacao = response.data;
+            }, function errorCallback(response) {
+            });
+        }
+
 
     }]);
